@@ -1,0 +1,17 @@
+api_events = pd.read_json("https://apiv2.apifootball.com/?action=get_events&from=2020-01-29&to=2020-02-03&APIkey=85e19bad2a13a8540b7ee727e9d89af18e4ec6cb04fc59b0b684a49799c40e38")
+
+from datetime import date
+today = date.today()
+todays =today.strftime("%Y-%m-%d")
+
+myapi = "85e19bad2a13a8540b7ee727e9d89af18e4ec6cb04fc59b0b684a49799c40e38"
+api_events = pd.read_json("https://apiv2.apifootball.com/?action=get_events&from=today&to=today&APIkey={}.format(myapi)")
+
+"""
+bunu şu şekilde apikey ve from to kısımlarını variable ile yazmaya çalışıyorum ama hep aşağıdaki hatayı aldım başaramadım
+
+VALUEERROR: IF USING ALL SCALAR VALUES, YOU MUST PASS AN INDEX
+
+
+
+"""
